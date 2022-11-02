@@ -1,0 +1,72 @@
+---
+title: "Title"
+subtitle: "150 years of stock index investing"
+format:
+    revealjs:
+        embed-resources: true
+---
+
+# Main point
+
+```{r}
+library(tidyverse)
+library(gt)
+
+library(targets)
+
+tar_source()
+```
+
+## Step 1: What would 1 dollar be worth today?
+
+```{r}
+tar_read(price_plot)
+```
+
+## Step 2: What would 1 dollar be worth today? (A better representation)
+
+```{r}
+tar_read(log_price_plot)
+```
+
+## Step 3: What would 1 dollar REALLY be worth today?
+
+```{r}
+tar_read(log_real_price_plot)
+```
+
+## Step 4: But all I have is 30 years
+
+```{r}
+# TODO
+```
+
+## Step 5: Ok, but I invest monthly
+
+```{r}
+# TODO
+```
+
+# Nerd info
+
+## Nerd info 1: historical real mean return
+
+```{r}
+tar_read(log_return_plot)
+```
+
+## Nerd info 1: historical real mean return
+
+```{r}
+tar_read(risk_premium_results) |>
+    gt() |>
+    fmt_percent(where(is.numeric)) |>
+    cols_merge(
+        c(ci_lower, ci_upper),
+        pattern = "[{1}, {2}]"
+    ) |>
+    cols_label(
+        estimate = "Estimate",
+        ci_lower = str_glue("Confidence interval ({scales::label_percent()(CONFIDENCE_LEVEL)})")
+    )
+```

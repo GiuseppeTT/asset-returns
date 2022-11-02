@@ -71,10 +71,18 @@ nerd_targets <- list(
     )
 )
 
+presentation_targets <- list(
+    tar_quarto(
+        presentation,
+        PRESENTATION_PATH
+    )
+)
+
 all_targets <- list(
     data_targets,
     plotting_targets,
-    nerd_targets
+    nerd_targets,
+    presentation_targets
 )
 
 all_targets
