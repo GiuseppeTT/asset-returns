@@ -60,9 +60,10 @@ RUN if [ "${ENABLE_JUPYTER}" = "true" ]; then \
     fi
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update \
-#     && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+RUN apt-get update \
+    && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends \
+        libglpk-dev
 
 # [Optional] Uncomment this section to install additional R packages.
 # RUN install2.r --error --skipinstalled --ncpus -1 <your-package-list-here>
