@@ -4,7 +4,7 @@ subtitle: "150 years of stock index investing"
 format:
     revealjs:
         embed-resources: true
-        output-file: github-pages/presentation.html
+        output-file: gh-pages/presentation.html
 ---
 
 # Main point
