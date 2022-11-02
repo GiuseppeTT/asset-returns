@@ -18,5 +18,32 @@ future::plan(future.callr::callr)
 tar_source()
 
 # Replace the target list below with your own:
-list(
+data_targets <- list(
+    tar_url(
+        raw_data_url,
+        RAW_DATA_URL
+    ),
+    tar_target(
+        raw_data,
+        read_data(raw_data_url)
+    ),
+    tar_target(
+        cleaned_data,
+        clean_data(raw_data)
+    ),
+    tar_target(
+        window_year_size,
+        WINDOW_YEAR_SIZE
+    ),
+    tar_target(
+        augmented_data,
+        augment_data(cleaned_data, window_year_size)
+    )
 )
+
+
+all_targets <- list(
+    data_targets
+)
+
+all_targets
