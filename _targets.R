@@ -41,9 +41,24 @@ data_targets <- list(
     )
 )
 
+plotting_targets <- list(
+    tar_target(
+        price_plot,
+        plot_price(augmented_data)
+    ),
+    tar_target(
+        log_price_plot,
+        plot_log_price(augmented_data)
+    ),
+    tar_target(
+        log_real_price_plot,
+        plot_log_real_price(augmented_data)
+    )
+)
 
 all_targets <- list(
-    data_targets
+    data_targets,
+    plotting_targets
 )
 
 all_targets
