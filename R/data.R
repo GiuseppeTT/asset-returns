@@ -73,7 +73,7 @@ clean_data <- function(
 ) {
     data <-
         data |>
-        dplyr::slice_head(n = -1)
+        dplyr::slice_head(n = -2)
 
     data <-
         data |>

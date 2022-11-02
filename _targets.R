@@ -56,9 +56,25 @@ plotting_targets <- list(
     )
 )
 
+nerd_targets <- list(
+    tar_target(
+        log_return_plot,
+        plot_log_return(augmented_data)
+    ),
+    tar_target(
+        confidence_level,
+        CONFIDENCE_LEVEL
+    ),
+    tar_target(
+        risk_premium_results,
+        estimate_risk_premium(augmented_data, confidence_level)
+    )
+)
+
 all_targets <- list(
     data_targets,
-    plotting_targets
+    plotting_targets,
+    nerd_targets
 )
 
 all_targets
