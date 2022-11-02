@@ -80,6 +80,7 @@ clean_data <- function(
         dplyr::mutate(date =
             date |>
             as.character() |>
+            stringr::str_pad(width = nchar("2000.01"), side = "right", pad = "0") |>
             readr::parse_date("%Y.%m")
         )
 
