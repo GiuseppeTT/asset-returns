@@ -53,6 +53,14 @@ plotting_targets <- list(
     tar_target(
         log_real_price_plot,
         plot_log_real_price(augmented_data)
+    ),
+    tar_target(
+        rolling_real_value_plot,
+        plot_rolling_real_value(augmented_data, window_year_size)
+    ),
+    tar_target(
+        rolling_dca_multiple_plot,
+        plot_rolling_dca_multiple(augmented_data, window_year_size)
     )
 )
 

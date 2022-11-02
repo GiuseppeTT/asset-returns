@@ -121,7 +121,14 @@ augment_data <- function(
         data |>
         dplyr::mutate(inflation_return = compute_return(inflation_price))
 
-    # TODO: Add rolling logic
+    window_size <- MONTHS_PER_YEAR * window_year_size
+
+    data <-
+        data |>
+        dplyr::mutate(
+            sp500_rolling_real_value = compute_rolling_value(sp500_total_return, window_size) / compute_rolling_value(inflation_return, window_size),
+            sp500_rolling_dca_multiple = compute_rolling_dca_value(sp500_total_return, inflation_price, window_size) / compute_rolling_dca_value(inflation_return, inflation_price, window_size)
+        )
 
     return(data)
 }

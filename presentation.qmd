@@ -38,13 +38,13 @@ tar_read(log_real_price_plot)
 ## Step 4: But all I have is 30 years
 
 ```{r}
-# TODO
+tar_read(rolling_real_value_plot)
 ```
 
 ## Step 5: Ok, but I invest monthly
 
 ```{r}
-# TODO
+tar_read(rolling_dca_multiple_plot)
 ```
 
 # Nerd info
