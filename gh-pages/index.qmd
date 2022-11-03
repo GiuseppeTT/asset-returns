@@ -2,9 +2,7 @@
 title: "Title"
 subtitle: "150 years of stock index investing"
 format:
-    revealjs:
-        embed-resources: true
-        output-file: gh-pages/presentation.html
+    revealjs: default
 ---
 
 # Main point
@@ -69,5 +67,6 @@ tar_read(risk_premium_results) |>
     cols_label(
         estimate = "Estimate",
         ci_lower = str_glue("Confidence interval ({scales::label_percent()(CONFIDENCE_LEVEL)})")
-    )
+    ) |>
+    as_raw_html()
 ```

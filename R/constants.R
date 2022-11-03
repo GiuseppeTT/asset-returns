@@ -4,7 +4,7 @@
 RAW_DATA_URL <- "http://www.econ.yale.edu/~shiller/data/ie_data.xls"
 
 ## Presentation
-PRESENTATION_PATH <- "presentation.qmd"
+PRESENTATION_PATH <- "gh-pages/"
 
 ## Parameters
 WINDOW_YEAR_SIZE <- 30

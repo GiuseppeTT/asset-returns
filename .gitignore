@@ -45,4 +45,3 @@ vignettes/*.pdf
 # Manually added
 _targets/
 _debug.R
-*.html

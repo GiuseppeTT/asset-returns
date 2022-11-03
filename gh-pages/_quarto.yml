@@ -1,0 +1,3 @@
+project:
+  title: "gh-pages"
+  output-dir: _site
