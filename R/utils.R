@@ -47,7 +47,7 @@ compute_rolling_value <- function(
     rolling_values <-
         returns |>
         convert_return(to = "log") |>
-        slider::slide_dbl(sum, .after = window_size, .complete = TRUE) |>
+        slider::slide_dbl(sum, .before = window_size, .complete = TRUE) |>
         convert_return(to = "simple") |>
         magrittr::add(1)
 
@@ -64,7 +64,7 @@ compute_rolling_dca_value <- function(
         slider::slide2_dbl(
             contributions,
             compute_dca_value,
-            .after = window_size,
+            .before = window_size,
             .complete = TRUE
         )
 
