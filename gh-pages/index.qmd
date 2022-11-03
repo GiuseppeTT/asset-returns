@@ -1,11 +1,11 @@
 ---
-title: "Title"
+title: "Stock returns"
 subtitle: "150 years of stock index investing"
 format:
     revealjs: default
 ---
 
-# Main point
+# Pre work {visibility="hidden"}
 
 ```{r}
 library(tidyverse)
@@ -16,25 +16,33 @@ library(targets)
 tar_source()
 ```
 
-## Step 1: What would 1 dollar be worth today?
+# Introduction
+
+## TODO
+
+TODO.
+
+# Main point
+
+## Step 1: How much would 1 dollar be worth today?
 
 ```{r}
 tar_read(price_plot)
 ```
 
-## Step 2: What would 1 dollar be worth today? (A better representation)
+## Step 2: How much would 1 dollar be worth today? (Better represented)
 
 ```{r}
 tar_read(log_price_plot)
 ```
 
-## Step 3: What would 1 dollar REALLY be worth today?
+## Step 3: How much would 1 dollar REALLY be worth today?
 
 ```{r}
 tar_read(log_real_price_plot)
 ```
 
-## Step 4: But all I have is 30 years
+## Step 4: But I don't have 150 years for investing
 
 ```{r}
 tar_read(rolling_real_value_plot)

@@ -21,7 +21,7 @@ plot_price <- function(
         ggplot2::theme_bw(FONT_SIZE) +
         ggplot2::labs(
             x = "Date",
-            y = "Price"
+            y = "Value"
         )
 
     return(plot)
@@ -50,7 +50,7 @@ plot_log_price <- function(
         ggplot2::theme_bw(FONT_SIZE) +
         ggplot2::labs(
             x = "Date",
-            y = "Price"
+            y = "Value"
         )
 
     return(plot)
@@ -79,7 +79,7 @@ plot_log_real_price <- function(
         ggplot2::theme_bw(FONT_SIZE) +
         ggplot2::labs(
             x = "Date",
-            y = "Price"
+            y = "Real value"
         )
 
     return(plot)
@@ -110,7 +110,7 @@ plot_rolling_real_value <- function(
         ggplot2::theme_bw(FONT_SIZE) +
         ggplot2::labs(
             x = "Date",
-            y = stringr::str_glue("Real investment value\n({window_year_size} years window)")
+            y = stringr::str_glue("Real value\n({window_year_size} years window)")
         )
 
     return(plot)
@@ -141,7 +141,7 @@ plot_rolling_dca_multiple <- function(
         ggplot2::theme_bw(FONT_SIZE) +
         ggplot2::labs(
             x = "Date",
-            y = stringr::str_glue("DCA investiment multiple\n({window_year_size} years window)")
+            y = stringr::str_glue("DCA multiple\n({window_year_size} years window)")
         )
 
     return(plot)
