@@ -41,7 +41,7 @@ data_targets <- list(
     )
 )
 
-plotting_targets <- list(
+main_point_targets <- list(
     tar_target(
         price_plot,
         plot_price(augmented_data)
@@ -64,7 +64,7 @@ plotting_targets <- list(
     )
 )
 
-nerd_targets <- list(
+nerd_info_targets <- list(
     tar_target(
         log_return_plot,
         plot_log_return(augmented_data)
@@ -88,8 +88,8 @@ presentation_targets <- list(
 
 all_targets <- list(
     data_targets,
-    plotting_targets,
-    nerd_targets,
+    main_point_targets,
+    nerd_info_targets,
     presentation_targets
 )
 
